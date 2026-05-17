@@ -27,6 +27,9 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,10 +37,12 @@ body {
   background: var(--crema);
   color: var(--texto);
   line-height: 1.65;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
-/* ── TYPOGRAPHY ── */
+/* ── TIPOGRAFÍA ── */
 h1,
 h2,
 h3,
@@ -82,6 +87,11 @@ p {
 }
 .section {
   padding: clamp(64px, 8vw, 100px) 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* ── URGENCY BAR ── */
@@ -184,6 +194,7 @@ nav {
   .hamburger {
     display: block;
   }
+
   .nav-links {
     position: absolute;
     top: 70px;
@@ -198,8 +209,26 @@ nav {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: none;
   }
+
   .nav-links.active {
     display: flex;
+  }
+
+  .hero-img-wrap {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .card-1,
+  .card-2 {
+    display: none;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: auto;
+    min-width: 0;
   }
 }
 
@@ -297,6 +326,7 @@ nav {
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  padding-top: 3vh;
 }
 .hero-dot {
   width: 8px;
@@ -373,9 +403,8 @@ nav {
   z-index: 1;
 }
 .hero-right img {
+  width: 100%;
   height: 100%;
-  width: auto;
-  min-width: 100%;
   object-fit: cover;
 }
 .hero-img-wrap {
@@ -607,6 +636,13 @@ nav {
   aspect-ratio: 3/4;
   background: linear-gradient(160deg, var(--verde-palido), var(--azul-palido));
   box-shadow: 0 20px 60px rgba(30, 74, 122, 0.12);
+}
+.sobre-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .sobre-img-placeholder {
   width: 100%;
