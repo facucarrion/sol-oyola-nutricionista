@@ -39,7 +39,8 @@ body {
   line-height: 1.65;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
+  position: relative;
 }
 
 /* ── TIPOGRAFÍA ── */
@@ -137,12 +138,18 @@ nav {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--texto);
   text-decoration: none;
   letter-spacing: 0.01em;
+}
+.nav-logo-img {
+  height: 90px;
+  margin-right: 8px;
 }
 .nav-logo span {
   color: var(--verde);
@@ -303,6 +310,12 @@ nav {
   color: var(--rojo);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 /* ══════════════════════════════════
      1. HERO
   ══════════════════════════════════ */
@@ -312,7 +325,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 60px;
-  padding: 0 0 80px;
+  padding: 0 0 200px;
   position: relative;
   overflow: initial;
 }
@@ -641,7 +654,7 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 10% center;
   display: block;
 }
 .sobre-img-placeholder {
@@ -987,6 +1000,7 @@ footer {
 footer p {
   font-size: 0.8rem;
   margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.45);
 }
 .footer-links {
   display: flex;
@@ -996,7 +1010,7 @@ footer p {
   flex-wrap: wrap;
 }
 .footer-links a {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(235, 235, 235, 0.8);
   text-decoration: none;
   font-size: 0.78rem;
   transition: color 0.2s;
